@@ -84,7 +84,7 @@ export default class Utils {
     return searchModel;
   }
 
-  public static filterFactory(queryParams: any, filterFields: string[]): FilterModel[] {
+  private static filterFactory(queryParams: any, filterFields: string[]): FilterModel[] {
     const pattern = /[\\:](contains|equals|startsWith|between)$/;
     const filters = [];
     filterFields.forEach(field => {
@@ -112,7 +112,7 @@ export default class Utils {
     return filters;
   }
 
-  public static sortFactory(sortData: any): SortModel[] {
+  private static sortFactory(sortData: any): SortModel[] {
     const pattern = /^[A|D][\\:][a-zA-Z0-9]{1,}$/;
     const sortObjectArray = [];
     if (typeof(sortData) === 'string') {
@@ -136,7 +136,7 @@ export default class Utils {
     return sortObjectArray;
   }
 
-  public static paginationFactory(pageData: string): PaginationModel {
+  private static paginationFactory(pageData: string): PaginationModel {
     const pattern = /[s][0-9]{1,}[\\:][f][0-9]{1,}/;
     const paginationModel = new PaginationModel();
     if (pattern.test(pageData)) {

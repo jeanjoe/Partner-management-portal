@@ -18,6 +18,7 @@ import { AuthInterceptor } from './services/httpinterceptor';
 import { CommonService } from './services/common.service';
 import { AuditService } from './services/audit.service';
 import { RolesService } from './services/roles.service';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ import { RolesService } from './services/roles.service';
     HttpClientModule,
     SharedModule,
   ],
-  declarations: [HeaderComponent, SideMenuComponent, HomeComponent, ParentComponent],
+  declarations: [HeaderComponent, SideMenuComponent, HomeComponent, ParentComponent, SpinnerComponent],
   exports: [HeaderComponent, SideMenuComponent, HomeComponent, ParentComponent, MaterialModule, RouterModule],
   providers: [SideMenuService, DataStorageService, AuthService, LoginRedirectService, AuthguardService,
     CanDeactivateGuardService, CommonService, AuditService, RolesService,

@@ -9,10 +9,10 @@
   }
   .mat-caption {
     text-align: left;
-    color: #ffffff;
+    color: var(--text-primary) !important;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 13px;
   }
 
   .menu-button {
@@ -25,7 +25,7 @@
       font-weight: 100;
       font-size: 8px;
       text-align: left;
-      color: #ffffff;
+      color: var(--text-primary) !important;
       position: relative;
       margin-top: 2px;
     }
@@ -41,8 +41,8 @@
       left: 0;
       text-align: right;
       visibility: hidden;
-      background-color: #ff4081;
-      color: #fff;
+      background-color: var(--color-accent);
+      color: var(--text-primary) !important;
       padding: 5px 5px;
       font-size: 7px;
       letter-spacing: 0.1em;
@@ -54,6 +54,7 @@
         margin: auto;
         white-space: pre-line;
         word-break: break-word;
+        color: var(--color-primary-dark);
       }
     }
   }
@@ -71,8 +72,8 @@
 .elipses + * .cdk-overlay-pane > div.mat-menu-panel {
   .mat-menu-item {
     line-height: 40px !important;
-  //   height: 34px !important;
-   }
+    //   height: 34px !important;
+  }
 }
 .mat-menu-content:not(:empty) {
   min-height: auto !important;
@@ -90,9 +91,9 @@
   padding-bottom: 0 !important;
 }
 
-.mat-menu-item{
-  line-height:30px !important;
-  height:35px !important;
+.mat-menu-item {
+  line-height: 30px !important;
+  height: 35px !important;
   font-size: x-small;
   font-family: "Roboto", sans-serif;
 }

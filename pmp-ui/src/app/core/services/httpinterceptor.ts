@@ -27,12 +27,12 @@ export class AuthInterceptor implements HttpInterceptor {
   decoded: any;
 
   constructor(
-    public redirectService: LoginRedirectService,
-    public router: Router,
-    public headerService: HeaderService,
-    public dialog: MatDialog,
-    public translateService: TranslateService,
-    public appService: AppConfigService
+    private redirectService: LoginRedirectService,
+    private router: Router,
+    private headerService: HeaderService,
+    private dialog: MatDialog,
+    private translateService: TranslateService,
+    private appService: AppConfigService
   ) { }
   // function which will be called for all http calls
   intercept(
@@ -57,7 +57,6 @@ export class AuthInterceptor implements HttpInterceptor {
                 this.headerService.setPartnerType(this.decoded["partnerType"]);
                 this.headerService.setUsername(event.body.response.userId);
                 this.headerService.setRoles(event.body.response.role);
-                this.headerService.setNotificationLanguage(this.decoded["langCode"]);
               }
             }
           }

@@ -29,8 +29,10 @@
     }
   },
   "dashboard": {
-    "welcomeMessage":"Welcome to Mosip Partner portal !",
-    "Logout":"Logout"
+    "welcomeMessage": "THE REPUBLIC OF UGANDA",
+    "detailedMessage1": "NATIONAL IDENTIFICATION & REGISTRATION AUTHORITY",
+    "detailedMessage2": "PARTNER MANAGEMENT PORTAL",
+    "Logout": "Logout"
   },
   "singleView": {
     "errorMessages": ["No record found", "A technical error has occurred"],
@@ -452,9 +454,9 @@
   "filters": {
     "titleTxt": "Add Filters",
     "footerButtons": {
-        "resetTxt": "Reset",
-        "cancelTxt": "Cancel",
-        "applyTxt": "Apply"
+      "resetTxt": "Reset",
+      "cancelTxt": "Cancel",
+      "applyTxt": "Apply"
     }
   },
   "isActive": {

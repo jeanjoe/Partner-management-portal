@@ -1,29 +1,47 @@
-@import '../../_theme.scss';
+@import "../../_theme.scss";
 
 #home-component {
-    margin-top: 16px;
-    
-    .title {
-        font-size: mat-font-size($custom-typography, body-1);
-        border-bottom: 1px solid mat-color($app-primary, 100);
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-    .discription {
-        font-size: mat-font-size($custom-typography, caption)
-    }
+  margin-top: 30px;
+
+  .title {
+    // font-size: mat-font-size($custom-typography, body-1);
+    border-bottom: 1px solid mat-color($app-primary, 100);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    /* UX enhancement */
+    padding-left: 4%;
+    /* UX enhancement end */
+  }
+  .discription {
+    //  font-size: mat-font-size($custom-typography, caption);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    /* UX enhancement */
+    padding-left: 4%;
+    /* UX enhancement end */
+  }
+  .header--logo {
+    vertical-align: middle;
+    cursor: pointer;
+    /* UX enhancement */
+    padding-left: 4%;
+    /* UX enhancement end */
+  }
 }
 
-.row > .col{
-    display: -webkit-inline-box;
-    padding: 10px;
+.row > .col {
+  display: -webkit-inline-box;
+  padding: 10px;
 }
 
-.row > .s4{
-    width:10%
+.row > .s4 {
+  width: 10%;
 }
 
-.row > .s8{
-    width:90%
+.row > .s8 {
+  width: 90%;
 }
-
