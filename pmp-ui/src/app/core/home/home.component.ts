@@ -3,8 +3,6 @@ import { AuditService } from "../services/audit.service";
 import { DataStorageService } from "../services/data-storage.service";
 import { HeaderService } from "../services/header.service";
 import { RequestModel } from "src/app/core/models/request.model";
-import { FilterValuesModel } from "src/app/core/models/filter-values.model";
-import { FilterRequest } from "src/app/core/models/filter-request.model";
 import { DialogComponent } from "src/app/shared/dialog/dialog.component";
 import { MatDialog } from "@angular/material";
 import { Router } from "@angular/router";
