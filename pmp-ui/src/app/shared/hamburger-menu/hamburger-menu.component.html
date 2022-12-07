@@ -1,11 +1,11 @@
 <div id="menuButton">
   <div *ngIf="data?.type === 'profile'">
     <span>
-      <img src="{{data?.profileImg}}" alt="Profile">
+      <img src="{{ data?.profileImg }}" alt="Profile" />
     </span>
     <span>
       <button class="menu-button" [matMenuTriggerFor]="menu">
-        <div class="mat-caption">{{userName}}</div>
+        <div class="mat-caption">{{ userName }}</div>
         <!-- <div class="zone-text">{{roleName}}
           <div class="tool-tip-wraper">
             <div class="tooltiptext">
@@ -17,7 +17,9 @@
     </span>
     <mat-menu #menu="matMenu" backdropClass="profile">
       <ng-container *ngFor="let item of dataList">
-        <button (click)="onItem()" mat-menu-item>{{buttonName | translate }}</button>
+        <button (click)="onItem()" mat-menu-item>
+          {{ buttonName | translate }}
+        </button>
       </ng-container>
     </mat-menu>
   </div>
@@ -28,11 +30,8 @@
     </button>
     <mat-menu #menu="matMenu" backdropClass="elipses">
       <ng-container *ngFor="let item of dataList">
-        <button (click)="onItem()" mat-menu-item>{{buttonName}}</button>
+        <button (click)="onItem()" mat-menu-item>{{ buttonName }}</button>
       </ng-container>
     </mat-menu>
   </div>
-
-
-  
 </div>

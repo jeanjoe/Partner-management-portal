@@ -42,7 +42,7 @@ h5 {
   padding: 4px 15px;
 }
 .footer-button {
-  border: 0.8px solid #FF4081;
+  border: 0.8px solid var(--color-accent);
   border-radius: 2px;
   margin: 5px;
   text-transform: capitalize;
@@ -64,13 +64,13 @@ h5 {
 
 .mat-dialog-actions {
   justify-content: flex-end;
-  height:61px;
+  height: 61px;
 }
 
 // Confirmation popup
 .mat-dialog-title {
   font-weight: 600;
-  font-family:"Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 .pop-up {
@@ -80,23 +80,23 @@ h5 {
   .mat-dialog-content {
     margin: 0 !important;
     padding: 0 !important;
-    font-family:"Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: small;
   }
-  .pop-up-footer  {
+  .pop-up-footer {
     background: #e6e7e7;
     margin-bottom: 0px;
     padding: 0 16px;
     .mat-button {
-      outline: 1px solid #FF4081 !important;
+      outline: 1px solid var(--color-accent) !important;
       margin: 0 10px;
       border-radius: 0;
-      color: #FF4081;
+      color: var(--color-accent);
     }
   }
   .pop-up-footer {
     .mat-button:focus {
-      background: #FF4081 !important;
+      background: var(--color-accent) !important;
       color: #ffffff;
       outline: 0 !important;
     }

@@ -34,11 +34,11 @@
                   >
                     <mat-spinner
                       [diameter]="20"
-                      style="margin-left:43%;"
+                      style="margin-left: 43%"
                     ></mat-spinner>
                   </mat-option>
                   <mat-option
-                    style="font-size: x-small;height: 30px;"
+                    style="font-size: x-small; height: 30px"
                     *ngFor="let option of filterOptions[filter.filtername]"
                     [value]="option.fieldValue"
                   >
@@ -109,11 +109,11 @@
                   >
                     <mat-spinner
                       [diameter]="20"
-                      style="margin-left:43%;"
+                      style="margin-left: 43%"
                     ></mat-spinner>
                   </mat-option>
                   <mat-option
-                    style="font-size: x-small;"
+                    style="font-size: x-small"
                     *ngFor="let option of filterOptions[filter.filtername]"
                     [value]="option.fieldValue"
                   >
@@ -142,7 +142,7 @@
         type="reset"
         mat-button
         class="footer-button"
-        style="color: #FF4081; border: inherit"
+        style="color: var(--color-accent); border: inherit"
       >
         <img
           src="assets/images/refresh.png"
@@ -153,7 +153,7 @@
         mat-button
         class="footer-button"
         (click)="onNoClick()"
-        style="color: #FF4081; background-color: white;"
+        style="color: var(--color-accent); background-color: white;"
       >
         {{ "filters.footerButtons.cancelTxt" | translate }}
       </button> -->
@@ -161,7 +161,8 @@
         type="submit"
         mat-button
         class="footer-button"
-        style="background-color:#FF4081; color:white;"
+        id="applyTxt"
+        style="background-color: var(--color-accent); color: white"
       >
         {{ "filters.footerButtons.applyTxt" | translate }}
       </button>
@@ -188,16 +189,14 @@
           "
         >
           <ng-container>
-            <mat-option
-              *ngIf="filterOptions[filter.filtername]?.length === 0"
-            >
+            <mat-option *ngIf="filterOptions[filter.filtername]?.length === 0">
               <mat-spinner
                 [diameter]="20"
-                style="margin-left:43%;"
+                style="margin-left: 43%"
               ></mat-spinner>
             </mat-option>
             <mat-option
-              style="font-size: x-small;"
+              style="font-size: x-small"
               *ngFor="let option of filterOptions[filter.filtername]"
               [value]="option.fieldValue"
             >
@@ -267,13 +266,15 @@
     height="45px"
     width="45px"
     class="success-img"
-   *ngIf="input.title === ('Success' || 'Success_ara' || 'Success_fra')"   />
-   <img
+    *ngIf="input.title === ('Success' || 'Success_ara' || 'Success_fra')"
+  />
+  <img
     src="assets/images/cross.png"
     height="45px"
     width="45px"
     class="success-img"
-   *ngIf="input.title === ('Error' || 'Error_ara' || 'Error_fra')"   />
+    *ngIf="input.title === ('Error' || 'Error_ara' || 'Error_fra')"
+  />
   <div class="pop-up-header">
     <b mat-dialog-title>{{ input.title }}</b>
     <div mat-dialog-content>
@@ -307,9 +308,7 @@
   </div>
   <div mat-dialog-actions class="pop-up-footer">
     <span
-      ><button mat-button cdkFocusInitial (click)="dismiss()">
-        OK
-      </button></span
+      ><button mat-button cdkFocusInitial (click)="dismiss()">OK</button></span
     >
   </div>
 </div>

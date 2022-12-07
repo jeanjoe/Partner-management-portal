@@ -34,14 +34,14 @@
                   >
                     <mat-spinner
                       [diameter]="20"
-                      style="margin-left:43%;"
+                      style="margin-left: 43%"
                     ></mat-spinner>
                   </mat-option>
                   <mat-option
                     *ngFor="let option of filterOptions[filter.filtername]"
                     [value]="option.fieldValue"
                   >
-                    {{ option.fieldValue}}
+                    {{ option.fieldValue }}
                   </mat-option>
                 </mat-autocomplete>
               </mat-form-field>
@@ -53,6 +53,7 @@
                       [matDatepicker]="picker"
                       placeholder="{{ filter.filterlabel[primaryLangCode] }}"
                       formControlName="{{ filter.filtername }}"
+                      id="{{ filter.filtername }}"
                       (focus)="
                         getControlName(
                           filter,
@@ -108,14 +109,14 @@
                   >
                     <mat-spinner
                       [diameter]="20"
-                      style="margin-left:43%;"
+                      style="margin-left: 43%"
                     ></mat-spinner>
                   </mat-option>
                   <mat-option
                     *ngFor="let option of filterOptions[filter.filtername]"
                     [value]="option.fieldValue"
                   >
-                    {{ option.fieldValue}}
+                    {{ option.fieldValue }}
                   </mat-option>
                 </ng-container>
               </mat-select>
@@ -123,16 +124,25 @@
           </ng-container>
         </ng-container>
       </ng-container>
-      <mat-error *ngIf="requiredError">&nbsp; {{fieldName}}: {{'validationMessages.required' | translate}}</mat-error>
-      <mat-error *ngIf="rangeError">&nbsp; {{fieldName}}: {{'validationMessages.range' | translate}}</mat-error>
-      <mat-error *ngIf="!filterGroup.valid">&nbsp; {{'validationMessages.invalid' | translate}}</mat-error>
+      <mat-error *ngIf="requiredError"
+        >&nbsp; {{ fieldName }}:
+        {{ "validationMessages.required" | translate }}</mat-error
+      >
+      <mat-error *ngIf="rangeError"
+        >&nbsp; {{ fieldName }}:
+        {{ "validationMessages.range" | translate }}</mat-error
+      >
+      <mat-error *ngIf="!filterGroup.valid"
+        >&nbsp; {{ "validationMessages.invalid" | translate }}</mat-error
+      >
     </div>
     <div class="footer">
       <button
         type="reset"
         mat-button
         class="footer-button"
-        style="color: #FF4081; border: inherit"
+        style="color: var(--color-accent); border: inherit"
+        id="reset"
       >
         <img
           src="assets/images/refresh.png"
@@ -143,7 +153,8 @@
         mat-button
         class="footer-button"
         (click)="onNoClick()"
-        style="color: #FF4081; background-color: white;"
+        style="color: var(--color-accent); background-color: white"
+        id="cancel"
       >
         {{ "filters.footerButtons.cancelTxt" | translate }}
       </button>
@@ -151,7 +162,8 @@
         type="submit"
         mat-button
         class="footer-button"
-        style="background-color:#FF4081; color:white;"
+        style="background-color: var(--color-accent); color: white"
+        id="applyTxt"
       >
         {{ "filters.footerButtons.applyTxt" | translate }}
       </button>

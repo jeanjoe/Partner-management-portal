@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./app/theme";
 
+@import "./styles/spinner";
+
 @include mat-core($custom-typography);
 
 @include angular-material-theme($app-theme);
@@ -58,7 +60,6 @@ h3 {
   // padding-top: 10px;
   overflow: hidden;
   padding-bottom: 250px;
-  padding-top: 15px;
   .navigation {
     .material-icons {
       cursor: pointer;
@@ -66,7 +67,7 @@ h3 {
     }
   }
   h3 {
-    margin:0px !important;
+    margin: 0px !important;
   }
   #flex-container {
     overflow-y: scroll;
@@ -74,25 +75,25 @@ h3 {
     /* max-height: 87vh; */
     padding-bottom: 20px;
     scrollbar-width: none;
-    
+
     /* width */
     &::-webkit-scrollbar {
-      width: .8em;
+      width: 0.8em;
     }
 
     /* Track */
     &::-webkit-scrollbar-track {
-      background: #f1f1f1; 
+      background: #f1f1f1;
     }
-     
+
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: #888; 
+      background: #888;
     }
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: #555; 
+      background: #555;
     }
   }
 
@@ -221,10 +222,9 @@ h3 {
     }
 
     .action-buttons > #createButton {
-      background-color: #FF4081 !important;
+      background-color: var(--color-accent) !important;
       color: white !important;
     }
-    
   }
 
   .mat-divider.mat-divider-inset {
@@ -264,24 +264,23 @@ h3 {
     height: 30px;
   }
 
-mat-keyboard-container {
-  min-width: 100% !important;
-  padding: unset !important;
-  position: absolute !important;
-  bottom: 0% !important;
-}
+  mat-keyboard-container {
+    min-width: 100% !important;
+    padding: unset !important;
+    position: absolute !important;
+    bottom: 0% !important;
+  }
 
-mat-keyboard-container mat-keyboard-key .mat-keyboard-key {
-  /* //padding: unset !important; */
-  padding: 0 0.485rem !important;
-}
-.mat-keyboard-col {
-  padding: 1px !important;
-}
-.mat-keyboard-wrapper {
-  padding: 0 !important;
-}
-
+  mat-keyboard-container mat-keyboard-key .mat-keyboard-key {
+    /* //padding: unset !important; */
+    padding: 0 0.485rem !important;
+  }
+  .mat-keyboard-col {
+    padding: 1px !important;
+  }
+  .mat-keyboard-wrapper {
+    padding: 0 !important;
+  }
 }
 mat-keyboard-container {
   min-width: 70% !important;
@@ -301,18 +300,33 @@ mat-keyboard-container {
   line-height: 24px !important;
 }
 
-.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon, .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
-    width: 1.7em !important;
+.mat-form-field-appearance-legacy
+  .mat-form-field-prefix
+  .mat-datepicker-toggle-default-icon,
+.mat-form-field-appearance-legacy
+  .mat-form-field-suffix
+  .mat-datepicker-toggle-default-icon {
+  width: 1.7em !important;
 }
 
-.mat-form-field-required-marker { color: red }
+.mat-form-field-required-marker {
+  color: red;
+}
 
-#flex-single-view .flex-body .forms-container .primary-form .left-sizing-container{
+#flex-single-view
+  .flex-body
+  .forms-container
+  .primary-form
+  .left-sizing-container {
   width: 45% !important;
 }
 
-#flex-single-view .flex-body .forms-container .primary-form .right-sizing-container{
-  padding-left:10rem !important;
+#flex-single-view
+  .flex-body
+  .forms-container
+  .primary-form
+  .right-sizing-container {
+  padding-left: 10rem !important;
   width: 55% !important;
 }
 
